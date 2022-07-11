@@ -21,7 +21,7 @@ const Home = () => {
     if (val.trim() !== '') {
       setTransactionHistory(
         TRANSACTION_HISTORY.filter(
-          item => item.status === val || item.type === val,
+          item => item.status === val || item.type === val || item.name === val ,
         ),
       );
       setVal('');
