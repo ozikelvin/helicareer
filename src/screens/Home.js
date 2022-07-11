@@ -34,7 +34,7 @@ const Home = () => {
     );
   };
 
-  useEffect(() => {
+  useEffect(() => { 
     setTransactionHistory(TRANSACTION_HISTORY);
   }, []);
 

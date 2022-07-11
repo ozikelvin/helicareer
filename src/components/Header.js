@@ -2,7 +2,7 @@
 import React from 'react';
 import { View, StyleSheet, Text  } from 'react-native';
 import colors from  '../assets/colors';
-import { HEADER_TITLE_SIZE } from  '../utils/constants';
+import { HEADER_TITLE_SIZE } from  '../constants';
 
 
 
