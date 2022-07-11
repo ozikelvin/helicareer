@@ -2,7 +2,7 @@
 /* eslint-disable react-native/no-inline-styles */
 
 import React, {useState, useEffect} from 'react';
-import {View, StyleSheet, Text, FlatList} from 'react-native';
+import {View, StyleSheet, Text, FlatList , Pressable} from 'react-native';
 import colors from '../assets/colors';
 import Header from '../components/Header';
 import TextInput from '../components/TextInput';
@@ -55,7 +55,13 @@ const Home = () => {
             onClick={onSearch}
           />
         </View>
-        <View style={styles.btnWrapper}>
+        
+      <View style={styles.btnWrapper}>
+            <Pressable onPress={() => setTransactionHistory(TRANSACTION_HISTORY) } >
+              <View style={styles.allWrapper} >
+            <Text style={styles.all}> All </Text>
+              </View>
+            </Pressable>
           <Button
             variant={'primary'}
             title={' + Withdrawal'}
@@ -131,6 +137,18 @@ const styles = StyleSheet.create({
     paddingBottom: DEVICE_HEIGHT * 0.28,
     paddingHorizontal: 20,
   },
+  all :{
+    color:colors.primary,
+    fontSize:18,
+    fontWeight:"700",
+    marginTop:17
+    
+  },
+  allWrapper : {
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center'
+  }
 });
 
 export default Home;
